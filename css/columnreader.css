@@ -1,0 +1,50 @@
+/* If necessary sets postion of Column Reader on the page. Column Reader is a single division made up of a Previous Navigation element, a Text Frame element, and a Next Navigation element */
+
+div#reader {
+	margin: 40px auto 0px; }	
+
+
+/* Sets Text Frame */
+
+div#textframe { 
+	margin: 0;
+	overflow: auto; 
+	float:left; }
+
+
+/* Sets width and stylying of Next and Previous navigation elements on either side of the Text Frame */ 
+
+div.nav { 
+	float:left;
+	width: 70px;
+	font-size: 40px;
+	cursor:pointer; }
+	
+div#prev span { 
+	float:left;
+	margin-right: 10px; }	
+div#next span {
+	float: right; 
+	margin-left: 10px; }		
+
+span.singlearrow {
+	color: #999; }
+span.singlearrow:hover {
+	color: #000; }		
+span.dblarrow {
+	color: #ddd; }
+span.dblarrow:hover {
+	color: #999; }		
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
