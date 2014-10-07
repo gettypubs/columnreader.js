@@ -1,12 +1,14 @@
-/* ------ Change these to adjust your layout ------ */
+// Change these to adjust your layout
 
 var col = 380;  /* column width */
 var ht = 560; /* column height */
 var gap = 20;  /* gap between columns */
 
-/* Delete numbers to set a maximum number of columns */
+// Delete numbers to set a maximum number of columns
 
 var cols = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+
+//Sets and checks document layout and scrolling
 
 var t = document.getElementById('text');
 var f = document.getElementById('textframe');
@@ -67,3 +69,14 @@ function scrollBeginning() {
 	if ( f.scrollLeft == 0 ) { window.location.href = pr; }
 	{ f.scrollLeft = 0; }
 	};
+	
+
+$(window).load(setLayout);
+$(document).ready(function() {			
+	$(window).resize(checkWidth);			
+	$("#scrollprev").click(scrollPrev);
+	$("#scrollbeginning").click(scrollBeginning);
+	$("#scrollnext").click(scrollNext);
+	$("#scrollend").click(scrollEnd);							
+});		
+	
