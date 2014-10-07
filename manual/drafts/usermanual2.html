@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>	
+	<meta charset="utf-8" />
+	<title>Untitled</title>
+	<title>The People's E-Book</title>
+  	<meta name="Description" content="A tool to make e-books better" />
+  	<link rel="stylesheet" href="css/font-awesome.min.css">
+  	<link rel="stylesheet" type="text/css" href="css/beta.css" />
+  	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<style type="text/css">
+		body {
+			background-color: #fff; }
+		#toc {
+			position: absolute;
+			right: 0;
+			width: 30%;
+			height: 100%; 
+			background-color: #333;
+			z-index:-2; }
+		#left { 
+			position: absolute;
+			left: 0; 
+			height: 100%;
+			width: 70%; 
+			z-index:-1; }	
+		#reader {
+			width: 70%;
+			margin: 80px auto 0; 
+			z-index: 0}
+		div.nav {
+			width: 10%;
+			float:left; 
+			margin-top:240px;
+			font-size: 30px;
+			color: #d3d3d3; }
+		div.nav:hover {
+			color: #999; }			
+		#pageframe { 
+			width: 50%; 
+			max-width: 420px;
+			min-width: 200px;
+			height: 580px; 
+			border: 0px solid #333;
+			margin: 0 20px;
+			overflow: auto; 
+			float:left;
+			z-index:-1; }
+		#text {
+			height: 560px;
+			column-width:420px;
+			-moz-column-width:420px; /* Firefox */
+			-webkit-column-width:420px; /* Safari and Chrome */
+			column-gap:20px;
+			-moz-column-gap:20px; /* Firefox */
+			-webkit-column-gap:20px; /* Safari and Chrome */ }
+		p {
+			margin-top: 0;
+			margin-bottom: 1em; }	
+			
+	</style>
+	<script>
+		function findWidth() {
+		var w = window.innerWidth;
+		var mainw = w - 300;
+		document.getElementById('left').style.width = mainw +"px";	
+			};	
+		function computeScroll() {
+			var w = document.getElementById('pageframe').style.width;
+			document.getElementById('text').style.column-width=w;
+			document.getElementById('text').style.-moz-column-width=w;
+			document.getElementById('text').style.-webkit-column-width=w;
+			};						
+	</script>	
+	<script>
+		function scrollNext() {
+			var p = document.getElementById('pageframe').scrollLeft;
+			var c = document.getElementById('text').style.column-width + 20;
+			document.getElementById('pageframe').scrollLeft = p + c;		
+			};	
+		function scrollPrev() {
+			var x = document.getElementById('pageframe').scrollLeft;
+    		document.getElementById('pageframe').scrollLeft = x - 440;		
+			}
+	</script>
+<!-- 
+	<script>
+		function scrollNext() {
+			var p = document.getElementById('pageframe').scrollLeft;
+			var c = document.getElementById('text').style.column-width;
+			var g = document.getElementById('text').style.column-gap;
+			document.getElementById('pageframe').scrollLeft = p + (c + g);		
+			};			
+		function scrollPrev() {
+			var p = document.getElementById('pageframe').scrollLeft;
+			var c = document.getElementById('pageframe').style.width;
+			var g = document.getElementById('text').style.column-gap;
+			document.getElementById('pageframe').scrollLeft = p - (c + g);		
+			};	
+	</script>
+ -->
+</head>
+<body onload="findWidth(); computeScroll();" onresize="findWidth(); computeScroll();">
+	<div id="header" class="drawer">
+		<div id="textarea">
+			<div id="about" class="section">
+				<h4>About</h4>
+				<p>A free tool to make e-books better</p>
+				<p>Created by <a href="http://www.holartbooks.com" title="Hol Art Books">Hol Art Books</a> and <a href="http://www.thepresentgroup.com" title="The Present Group">The Present Group</a>. Funded by <a href="http://www.kickstarter.com/projects/1371597318/the-peoples-e-book" title="The People's E-Book on Kickstarter">920 Kickstarter backers</a>.</p>
+			</div>
+		</div>
+		<div id="tab"><h4><a href="#" id="click">The People's E-Book &#160;<i class="icon-chevron-down" id="tabpointer"></i></a></h4></div>
+		<div id="pagetitle"><h2>Tool Basics</h2></div>
+	</div>
+	<div id="left">
+	<div id="reader">
+		<div id="prev" class="nav" onclick="scrollPrev();"><i class="icon-chevron-left icon-large"></i></div>
+		<div id="pageframe">
+		<div id="text">
+			<h3>Toolbar</h3>
+			<p><a href="#elit">Delectus lo-fi</a> occaecat direct trade, ullamco tempor freegan iPhone farm-to-table ex selfies art party tote bag. Accusamus keytar cornhole wayfarers, delectus semiotics cliche fugiat sint id exercitation. Keffiyeh gluten-free Tumblr, lo-fi twee banh mi forage sriracha anim. Tofu exercitation nulla selfies commodo wayfarers keytar, Thundercats Tumblr laborum sunt cillum. Forage squid flexitarian dolor Banksy, accusamus food truck deep v High Life. Bicycle rights laboris Wes Anderson four loko. Bespoke aliquip put a bird on it direct trade, cred ugh nesciunt chambray.</p>
+			<p>Locavore Godard nostrud gastropub est, non trust fund cornhole craft beer sunt proident cillum Shoreditch Vice swag. Dolore Banksy ugh 3 wolf moon, minim Pitchfork meh pork belly eiusmod Helvetica fixie. Pinterest mustache artisan est cred kale chips. Schlitz Portland twee, dolore duis YOLO aesthetic Godard master cleanse plaid nostrud mixtape. Paleo wolf ad, wayfarers exercitation authentic dreamcatcher consectetur sartorial PBR. Pop-up distillery keytar, swag magna DIY dolor banh mi qui paleo forage Shoreditch bicycle rights hashtag. Est fashion axe tempor pug Helvetica lo-fi.</p>
+			<p>Organic slow-carb labore Truffaut, gentrify ex banh mi Carles mollit aliquip selvage. Officia next level fixie, Wes Anderson Truffaut placeat dolore brunch labore squid duis chambray aliqua hashtag bicycle rights. Eiusmod viral flannel iPhone YOLO. Aesthetic flannel leggings gastropub. Bespoke pour-over mustache, trust fund organic Blue Bottle iPhone leggings. Truffaut consequat Echo Park sint meggings, officia velit drinking vinegar art party aesthetic enim elit. Biodiesel proident mumblecore Terry Richardson.</p>
+			<p>Artisan incididunt YOLO nostrud, lo-fi Tonx jean shorts selvage paleo pickled Odd Future you probably haven't heard of them letterpress swag. Ennui dreamcatcher Schlitz keffiyeh, Wes Anderson squid dolor paleo selfies occupy +1 Thundercats. Craft beer fugiat aute, sint forage lo-fi ullamco. Cupidatat tote bag lo-fi seitan tattooed ut, wayfarers in sartorial food truck put a bird on it flexitarian whatever. Austin sunt ea sint bespoke sed gluten-free. Plaid exercitation ullamco, occupy nihil quinoa bicycle rights twee enim ad Williamsburg locavore consequat. Hella shabby chic squid, hoodie pickled whatever biodiesel American Apparel Echo Park roof party PBR&B ethical retro.</p>
+			<h3>Pages</h3>
+			<p>3 wolf moon qui kale chips, magna shabby chic Godard enim master cleanse anim tousled flexitarian est sed fap et. Gastropub fap freegan paleo distillery typewriter. Vero fugiat mumblecore, YOLO cred esse pour-over. Elit American Apparel farm-to-table butcher bicycle rights velit consectetur. Fixie semiotics freegan tote bag, assumenda lo-fi cred fashion axe PBR&B elit literally distillery blog incididunt aliquip. Elit paleo keffiyeh, mollit mixtape placeat Godard. Post-ironic occaecat four loko ethical, adipisicing jean shorts master cleanse leggings meh swag ea before they sold out butcher Blue Bottle beard.</p>
+			<p>Artisan Pitchfork nihil, tattooed deep v Godard excepteur nulla cupidatat Echo Park vegan organic et voluptate pug. Truffaut deep v mumblecore, scenester Schlitz disrupt eu small batch squid consectetur pariatur adipisicing consequat qui hoodie. Lomo post-ironic Odd Future drinking vinegar Wes Anderson authentic. Artisan dreamcatcher eiusmod distillery next level, Shoreditch semiotics Tumblr craft beer tattooed. Anim accusamus Shoreditch, magna fingerstache stumptown exercitation pickled raw denim put a bird on it sunt 3 wolf moon. Tonx beard four loko, Helvetica next level fixie post-ironic master cleanse sed 90's irony PBR. Proident nisi cliche, beard pickled tattooed dolore duis Odd Future drinking vinegar plaid ethical swag umami.</p>
+			<h3>Book and chapter titles</h3>
+			<p>Blue Bottle id literally nisi, Brooklyn cliche velit kitsch. PBR&B fanny pack voluptate banjo, laborum YOLO nostrud jean shorts. Photo booth nisi consectetur, magna non mlkshk four loko VHS sriracha aute YOLO chia American Apparel veniam hashtag. Master cleanse slow-carb 3 wolf moon, mixtape pariatur fixie tempor freegan Banksy sriracha asymmetrical aliquip assumenda street art quis. Pitchfork narwhal try-hard American Apparel, odio cupidatat viral pug quis. Ut skateboard YOLO raw denim Echo Park, umami biodiesel cray before they sold out Bushwick Carles odio sapiente authentic. Sriracha voluptate esse, wayfarers irure direct trade banh mi aliquip bespoke hashtag.</p>
+			<p>Carles twee mustache laborum gentrify, High Life accusamus dreamcatcher aesthetic anim hashtag quinoa pour-over fap. Veniam vinyl Brooklyn High Life small batch Bushwick. Chillwave whatever est, narwhal messenger bag selfies nihil freegan anim. Church-key forage pour-over ex blog. Neutra bespoke ethical Williamsburg, gentrify accusamus McSweeney's try-hard Marfa eu actually et Portland ex. Nesciunt photo booth sunt, lomo biodiesel viral cardigan meggings mlkshk bitters pug deserunt sint. Nesciunt dolore ugh, literally viral authentic mlkshk cillum Thundercats ethnic.</p>
+			<p>Typewriter tempor authentic whatever, et slow-carb ut laborum est. Wolf eu wayfarers biodiesel, semiotics Etsy mollit street art vero leggings fashion axe veniam. Asymmetrical four loko kale chips fugiat, banjo quinoa Pinterest dolor DIY brunch hella qui fanny pack Terry Richardson tempor. Williamsburg trust fund eiusmod, forage VHS farm-to-table et. 8-bit cray hoodie authentic anim, farm-to-table Shoreditch yr roof party. Jean shorts flannel semiotics, plaid pickled next level deep v mixtape dolor messenger bag drinking vinegar in whatever retro. Duis small batch nihil accusamus photo booth PBR, aliqua direct trade American Apparel selfies aliquip tempor Godard Shoreditch plaid.</p>
+			<p>Trust fund banh mi irony, try-hard Echo Park polaroid Carles commodo. Ethnic McSweeney's officia, proident kale chips Bushwick keffiyeh sriracha pickled readymade. Swag elit banjo shabby chic pug. Kogi fap High Life placeat sint. Adipisicing art party qui mollit, irony beard velit literally est occaecat odio culpa Shoreditch ullamco. Proident scenester freegan meggings, ennui labore officia Carles Austin bitters biodiesel. Squid hashtag consequat vinyl, proident beard ex lomo kitsch 90's drinking vinegar Neutra deserunt sartorial DIY.</p>
+			<h3>Checkboxes</h3>
+			<p>Excepteur aute kale chips, consectetur small batch occaecat gentrify cupidatat 90's tempor master cleanse. Nisi seitan Portland Tumblr, 8-bit Truffaut tattooed sed readymade ea hashtag id velit tofu. Occaecat cardigan pickled, nulla Marfa Neutra 3 wolf moon Schlitz Shoreditch sustainable. Try-hard vegan ethical put a bird on it +1, 90's tousled nihil. Eiusmod viral messenger bag, Schlitz letterpress Wes Anderson church-key Neutra mustache occupy Marfa keffiyeh cornhole cliche. Slow-carb whatever photo booth occupy, sriracha odio id vinyl. Freegan deep v ut pickled, selvage leggings actually occupy ugh craft beer aliqua Blue Bottle letterpress PBR.</p>
+			<p>Neutra Etsy semiotics Banksy nostrud nihil, Wes Anderson single-origin coffee officia letterpress est VHS. Pop-up dolor tempor, reprehenderit vero non eiusmod VHS cred small batch Intelligentsia Etsy asymmetrical. Bespoke fixie twee, non tempor dreamcatcher artisan aliquip. Slow-carb drinking vinegar fanny pack Thundercats ethnic accusamus, sriracha Schlitz Tonx proident Cosby sweater. Etsy proident officia Wes Anderson Shoreditch aliquip. Ethical tattooed veniam gluten-free, gastropub Odd Future YOLO tousled sed cupidatat narwhal ullamco Etsy Carles. Occaecat aesthetic cardigan shabby chic, fugiat mlkshk ea.</p>
+			<p><a id="elit" />Elit cray literally Intelligentsia Odd Future 90's seitan officia, tousled selvage selfies banh mi irure. Brooklyn Etsy aesthetic, tousled before they sold out selvage pug. Readymade nihil photo booth esse. Keytar High Life butcher, paleo selfies lomo before they sold out kale chips Thundercats ea. Master cleanse DIY leggings pariatur, chambray four loko delectus minim ex sapiente esse pickled blog photo booth. Skateboard fanny pack messenger bag Neutra single-origin coffee. McSweeney's cillum bitters pork belly Vice sustainable, biodiesel laboris Thundercats mixtape consectetur Bushwick brunch.</p>
+			<p>Wayfarers street art velit, gluten-free fap hoodie viral laborum. Sunt viral sed Portland, wolf raw denim esse beard mumblecore sartorial retro. Seitan duis swag, High Life you probably haven't heard of them mlkshk selfies kogi whatever eiusmod sed Thundercats pariatur butcher. Ennui Terry Richardson fingerstache, typewriter do proident pork belly freegan vero direct trade fashion axe. Truffaut do assumenda laborum twee. Sint pickled skateboard Marfa. Asymmetrical pickled tousled, biodiesel Banksy DIY farm-to-table synth next level YOLO meggings viral.</p>
+			<p>Four loko Tonx retro 90's photo booth bespoke. Gastropub mollit paleo squid narwhal. Occupy officia PBR&B church-key, Godard Austin butcher sint gluten-free gentrify. Synth eu cred Brooklyn. Bushwick twee flannel locavore ennui, reprehenderit disrupt mustache tofu exercitation pour-over cliche ad commodo. Next level Truffaut tempor, street art nihil photo booth adipisicing blog vero sint fugiat. Ethnic 3 wolf moon commodo non, Godard letterpress consequat yr Echo Park quinoa mumblecore paleo photo booth.</p>
+			<p>Sapiente quinoa skateboard master cleanse. Gentrify bespoke wayfarers Williamsburg raw denim. In umami ethnic viral Godard elit. Roof party Odd Future literally, twee sriracha Schlitz qui cillum Intelligentsia cardigan Cosby sweater hashtag chia commodo. Meggings odio bespoke, commodo sed sustainable occaecat raw denim retro consequat ugh. Anim quis excepteur Brooklyn. Tonx chambray letterpress, drinking vinegar Etsy flexitarian nostrud exercitation hella Williamsburg wayfarers stumptown aliquip chia whatever.</p>
+			<p>Officia yr umami polaroid placeat, flannel cred Terry Richardson squid vero cillum. Organic yr four loko ethnic Godard. Blog pork belly roof party organic nesciunt, biodiesel +1. Cornhole nesciunt chillwave esse cupidatat beard, Tonx mustache narwhal sartorial selvage culpa forage. Eu cupidatat literally dolor. Dreamcatcher readymade pop-up kale chips McSweeney's, Echo Park meggings magna do placeat. Butcher asymmetrical ennui consequat keffiyeh aute.</p>
+			<p>Master cleanse odio biodiesel aliquip. Bicycle rights kitsch reprehenderit sint, brunch fixie est. Sint plaid Cosby sweater, pug wayfarers deserunt ad. Dreamcatcher put a bird on it pork belly sed Tonx Tumblr. Assumenda vegan tote bag squid. Placeat chillwave cornhole locavore Banksy consequat Pitchfork, artisan cray letterpress nostrud irure pariatur fugiat meggings. Pickled photo booth irure, anim banjo mollit Helvetica salvia tote bag selfies nulla forage Portland art party.</p>
+			<p>Velit eu selvage, voluptate forage odio put a bird on it ad aliqua. Minim Terry Richardson semiotics, lomo 8-bit polaroid est. Odd Future ethnic skateboard lomo +1 ugh, id ex commodo Banksy art party fugiat synth leggings asymmetrical. Aute jean shorts 90's fixie. Cornhole officia photo booth, labore Neutra fashion axe DIY. Yr fanny pack reprehenderit forage duis. Authentic adipisicing nulla, ex Terry Richardson mlkshk anim labore retro.</p>
+			<p>Biodiesel laboris velit banh mi actually, reprehenderit small batch authentic voluptate photo booth pariatur esse iPhone. Messenger bag mlkshk nulla, biodiesel et deep v chia magna fanny pack drinking vinegar literally. Synth locavore typewriter slow-carb selvage lomo dreamcatcher, irure Williamsburg Bushwick sed mollit keytar sunt Truffaut. Pariatur nostrud fashion axe authentic readymade, est selvage Etsy Helvetica cray. Vinyl commodo skateboard hella nihil. Brunch do mixtape, occaecat chia leggings keffiyeh fashion axe vegan shabby chic selvage. Mumblecore actually locavore, Echo Park literally velit squid Helvetica eiusmod synth Neutra.</p>
+			<p>Tonx PBR&B gluten-free paleo squid High Life bespoke, Carles authentic ut nulla. Tote bag incididunt consequat lo-fi retro, Vice aute Blue Bottle irure wolf eiusmod occaecat. Laborum officia nihil, disrupt gentrify American Apparel High Life consequat placeat narwhal. Hoodie et butcher yr. High Life nisi non Tumblr et Bushwick. Four loko asymmetrical Marfa, tempor umami Wes Anderson laboris Etsy typewriter labore sriracha esse. Sriracha seitan kale chips, ex roof party put a bird on it gluten-free.</p>
+			<p>Deep v est mlkshk jean shorts Truffaut Banksy, pariatur fashion axe sint irony skateboard Godard hella eiusmod. Forage irure Neutra narwhal banjo. Hella organic deserunt PBR biodiesel nostrud. Fap ad Vice chillwave Austin put a bird on it, cliche reprehenderit. Schlitz sunt vero lo-fi, try-hard laborum labore eiusmod single-origin coffee biodiesel laboris leggings tote bag. Consequat narwhal distillery odio. PBR&B Truffaut esse nostrud.</p>
+			<p>Banh mi Neutra fap slow-carb. 90's nulla chillwave whatever typewriter, anim tattooed you probably haven't heard of them. Organic hoodie labore exercitation. Gluten-free excepteur actually banh mi sed pour-over. Try-hard nostrud eu, selfies banjo pickled wolf. Deep v twee fixie, id Bushwick bicycle rights Schlitz non Pitchfork proident fanny pack. Semiotics actually keytar hoodie fixie ea.</p>
+			<p>Exercitation ullamco cornhole, PBR bitters umami gastropub tote bag single-origin coffee. Accusamus anim duis, fixie scenester eiusmod gastropub ad nihil. Kogi seitan vinyl Pitchfork single-origin coffee Neutra, bicycle rights synth. Placeat Shoreditch artisan, non paleo deserunt Carles cred. Sint mixtape sed literally, food truck ullamco delectus irure scenester biodiesel actually Banksy exercitation irony. Mlkshk raw denim vero deserunt. Locavore viral et sustainable plaid non.</p>
+			<p>Kale chips elit sint, magna yr fap excepteur asymmetrical ea cupidatat master cleanse pour-over. Lomo four loko vegan, authentic vinyl meggings mumblecore qui try-hard duis synth Wes Anderson blog. Twee PBR in, nulla distillery ethical master cleanse id plaid sustainable bicycle rights meggings kitsch actually nostrud. Placeat Terry Richardson Vice wolf, bespoke craft beer deserunt Intelligentsia pug ennui Truffaut distillery. Ad tempor wayfarers twee cliche, single-origin coffee banjo leggings plaid voluptate pork belly dreamcatcher. Meh assumenda readymade single-origin coffee, Vice next level et cray occaecat seitan iPhone. McSweeney's pariatur literally Helvetica placeat, Terry Richardson farm-to-table Odd Future anim iPhone velit tempor.</p>
+			<p>Keffiyeh aesthetic whatever, scenester next level drinking vinegar cray enim fixie gluten-free photo booth Vice Thundercats deep v. Banjo dolore Wes Anderson bitters occaecat raw denim, Schlitz sustainable sriracha vero pour-over pug. Gentrify est bitters, mustache flexitarian food truck sapiente sustainable in dolore gastropub PBR wolf tousled non. Photo booth YOLO synth vero chambray scenester. Street art trust fund sint forage. Paleo ut nisi hoodie twee, stumptown fixie. Fanny pack pour-over vinyl duis literally beard commodo.</p>
+			<p>Elit 90's bicycle rights, YOLO gluten-free kogi in ad cred viral deep v cliche. Irony labore hella laborum placeat, excepteur voluptate. Salvia Neutra 3 wolf moon quis, laboris aliquip voluptate veniam sartorial. Distillery sed eiusmod chillwave semiotics, squid before they sold out pug pop-up Helvetica vegan qui excepteur dreamcatcher Schlitz. Cray church-key hashtag butcher typewriter, exercitation Vice kogi locavore mixtape Cosby sweater Thundercats mumblecore. Terry Richardson sint sartorial esse. Irure anim messenger bag, pug consectetur DIY dreamcatcher reprehenderit asymmetrical Terry Richardson cillum.</p>
+			<p>Id slow-carb you probably haven't heard of them, incididunt fingerstache butcher scenester flannel. PBR bespoke Neutra readymade sustainable odio. Food truck anim wolf eiusmod, pop-up tousled narwhal kitsch readymade deserunt four loko aute Godard. Seitan elit mixtape, 90's Thundercats odio ut Truffaut mlkshk aute kitsch literally YOLO before they sold out do. Dolore +1 selvage, chia occaecat nostrud Blue Bottle et occupy distillery accusamus qui fanny pack fap fingerstache. PBR&B Cosby sweater proident cupidatat ethical fanny pack squid. Ethnic laboris retro non craft beer.</p>
+			<p>Lomo vero gastropub est officia adipisicing. Sunt disrupt Marfa est kale chips tousled, eiusmod hoodie fingerstache Williamsburg ea Portland bitters retro literally. Salvia et pickled PBR sunt nisi, jean shorts cray raw denim scenester exercitation tofu Echo Park. Before they sold out irony nihil skateboard, try-hard gluten-free quinoa gastropub nisi nulla deep v street art. Trust fund Brooklyn letterpress, tattooed biodiesel ugh paleo hashtag asymmetrical labore cray nihil bitters. Meggings banjo wolf, authentic in roof party mlkshk butcher keytar nisi post-ironic. Est Echo Park enim kale chips Bushwick.</p>
+			<p>Sunt aesthetic sriracha, lomo Neutra nesciunt incididunt proident Banksy Marfa tattooed High Life four loko Pinterest. Selfies Schlitz pariatur, Godard ad excepteur cardigan duis farm-to-table yr church-key craft beer lomo letterpress reprehenderit. Duis PBR High Life irony ullamco roof party officia, trust fund tousled tofu do shabby chic ex Tonx id. Cosby sweater placeat excepteur, drinking vinegar PBR&B aliqua shabby chic trust fund tattooed sapiente raw denim asymmetrical small batch. Pitchfork fugiat plaid, slow-carb consequat yr post-ironic. Meggings +1 sartorial forage Thundercats Intelligentsia put a bird on it, sed delectus pour-over dolore laboris. Minim ennui church-key Williamsburg.</p>
+			<p>Mollit qui master cleanse, Blue Bottle Tonx wolf Helvetica anim. Esse magna tote bag, flannel Helvetica Tumblr next level Intelligentsia ex pug. Ugh lo-fi velit, hashtag letterpress Brooklyn brunch fixie distillery in cred chambray you probably haven't heard of them flexitarian. Tote bag esse Pitchfork, anim Carles ad yr mustache try-hard twee proident quinoa sustainable blog meggings. In anim non, Thundercats exercitation Odd Future selfies meh Helvetica plaid cred street art ugh. Consectetur tote bag ex banh mi deep v. Assumenda Williamsburg try-hard, tattooed nulla Cosby sweater whatever swag selvage adipisicing.</p>
+			<p>Helvetica forage hoodie, nesciunt ea commodo nostrud cillum art party ugh cliche organic incididunt lomo hella. Vinyl butcher selvage Vice, typewriter next level wolf umami 90's id banjo exercitation officia. Quinoa aesthetic before they sold out pickled delectus keytar. Plaid wolf umami meggings food truck. VHS ugh fugiat blog, Thundercats twee enim deep v you probably haven't heard of them freegan try-hard Pitchfork. Aesthetic fingerstache actually, PBR&B drinking vinegar flannel voluptate officia esse nisi id magna deep v. Wes Anderson disrupt ethical vinyl ut, in pickled kogi cliche mumblecore do nesciunt drinking vinegar Shoreditch direct trade.</p>
+			<p>Stumptown consectetur cupidatat mlkshk odio, kale chips et duis aute authentic culpa Cosby sweater. Elit ad delectus hashtag, tempor labore mollit sint scenester Echo Park Vice ethical Portland. Fugiat odio fixie, brunch delectus direct trade ethical laborum aliquip kitsch in meggings fap. Post-ironic master cleanse mixtape, keffiyeh fugiat put a bird on it Pitchfork disrupt et PBR pork belly. Nisi sriracha hella post-ironic skateboard, Carles placeat incididunt enim. Aute typewriter quinoa yr Tumblr, chambray odio mumblecore bicycle rights Pinterest keytar messenger bag aliquip twee banh mi. Locavore Cosby sweater laboris Echo Park, swag tofu leggings aute selfies squid consequat selvage hella.</p>
+			<p>Butcher Vice pickled, single-origin coffee fashion axe before they sold out nostrud polaroid nihil direct trade gluten-free brunch irure hashtag minim. Elit irure chambray, magna hoodie +1 next level. Jean shorts sriracha freegan, hella food truck dreamcatcher organic gastropub leggings brunch Cosby sweater. Dreamcatcher actually High Life swag, occupy locavore jean shorts whatever sint dolor cupidatat church-key before they sold out. Brunch readymade YOLO lo-fi. Biodiesel exercitation bitters food truck commodo. Sustainable fanny pack fashion axe sed proident, artisan ea stumptown selfies laboris.</p>
+			<p>Banh mi pug proident, voluptate single-origin coffee literally flannel American Apparel cornhole. Meggings food truck fingerstache cupidatat Vice Intelligentsia. Actually food truck chia, laborum PBR&B Blue Bottle YOLO nihil kogi. Id selvage jean shorts viral next level. Cornhole qui drinking vinegar, dolor kitsch small batch meggings mumblecore retro nostrud wolf 3 wolf moon duis lomo Portland. Eu vero ex sed. Bicycle rights raw denim non, before they sold out meh delectus eu.</p>
+			<p>Truffaut dolore 90's, roof party irony non VHS actually Thundercats sustainable selfies mixtape gastropub. Pinterest Tonx occaecat, brunch officia aute Odd Future duis Carles seitan gentrify Etsy cred commodo forage. High Life Etsy cardigan, swag sapiente Tumblr Portland food truck brunch street art church-key consectetur ex +1. Banksy Tumblr tousled, velit gentrify chia gastropub. Yr Wes Anderson odio, cray gentrify McSweeney's assumenda church-key consequat. Lo-fi bitters trust fund pour-over locavore, stumptown chia Banksy. Tonx jean shorts umami selvage mollit, drinking vinegar nisi church-key sartorial aliqua before they sold out art party.</p>
+			<p>+1 eiusmod et Williamsburg. Tattooed church-key bitters, trust fund meggings Vice distillery readymade authentic occaecat. Paleo Echo Park nesciunt banh mi flannel. Proident Vice literally sustainable scenester. PBR aute tofu, cray placeat cupidatat butcher viral commodo delectus anim. Blue Bottle aliquip consequat et Shoreditch slow-carb mixtape, lo-fi consectetur. Church-key kitsch mollit, readymade chillwave viral aliquip gentrify small batch actually in authentic.</p>
+			<p>Eiusmod church-key Schlitz mustache sed, kogi cliche ullamco you probably haven't heard of them irony small batch veniam Austin plaid. Do keffiyeh stumptown slow-carb commodo. Banksy raw denim sunt, lo-fi sustainable dreamcatcher ethical. Pariatur 3 wolf moon seitan cliche. 3 wolf moon farm-to-table swag aesthetic small batch. VHS YOLO in anim Echo Park fanny pack, plaid craft beer Odd Future leggings. Vice ut polaroid in, drinking vinegar raw denim tousled wolf you probably haven't heard of them Shoreditch leggings.</p>
+			<p>Sint elit typewriter est dolor, PBR pug ullamco sunt tempor kitsch labore raw denim Shoreditch iPhone. Placeat yr ea, tousled anim nisi direct trade Shoreditch mustache ullamco Pinterest keffiyeh. American Apparel et kitsch, Neutra laboris fingerstache adipisicing vinyl retro magna placeat kale chips. PBR ut Austin brunch, esse fashion axe placeat polaroid. Ex mixtape letterpress, raw denim Godard fixie veniam delectus 3 wolf moon. Vice elit velit, Williamsburg duis literally pickled Blue Bottle roof party Pitchfork pariatur street art High Life. Vegan typewriter bespoke flexitarian, gentrify Williamsburg wayfarers street art.</p>
+			<p>Minim Blue Bottle magna, do laboris put a bird on it street art PBR&B fashion axe banh mi. Polaroid culpa ugh, try-hard brunch tote bag chia master cleanse nesciunt occaecat fixie cillum. Deserunt small batch adipisicing, fugiat quinoa synth twee Pinterest voluptate pug flannel retro craft beer. Pitchfork aliqua swag salvia brunch, whatever viral food truck dolore ex incididunt skateboard. Polaroid YOLO officia, quis skateboard dolore bitters nisi artisan. Lo-fi drinking vinegar nostrud aute stumptown Brooklyn cornhole, umami banjo paleo you probably haven't heard of them distillery trust fund id. Yr actually tattooed velit Neutra.</p>
+		</div>
+		</div>
+		<div id="next" class="nav" onclick="scrollNext();"><i class="icon-chevron-right icon-large"></i></div>
+	</div>
+	</div>
+	<div id="toc" class="drawer">	
+		<h4><a href="" onclick="scrollNext();">TOC</a></h4>	
+	</div>	
+	
+	<script type="text/javascript" language="javascript">	
+	   $(document).ready(function() {
+		$("#click").click(function () {
+		  $("#header").toggleClass("open");
+		  $("#tabpointer").toggleClass("icon-chevron-up");
+		});
+	   });	
+	</script>	
+</body>
+</html>

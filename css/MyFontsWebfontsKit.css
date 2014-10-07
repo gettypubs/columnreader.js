@@ -1,0 +1,32 @@
+/* @license
+ * MyFonts Webfont Build ID 2578027, 2013-06-11T12:50:40-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: Grotesque MT Bold by Monotype Imaging
+ * URL: http://www.myfonts.com/fonts/mti/grotesque-mt/bold/
+ * 
+ * Webfont: Grotesque MT by Monotype Imaging
+ * URL: http://www.myfonts.com/fonts/mti/grotesque-mt/grotesque-mt/
+ * 
+ * 
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=2578027
+ * Webfonts copyright: Digitized data copyright The Monotype Corporation 1991-1995.
+ * 
+ * © 2013 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/27566b");
+
+  
+@font-face {font-family: 'GrotesqueMT-Bold';src: url('../webfonts/27566B_0_0.eot');src: url('../webfonts/27566B_0_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/27566B_0_0.woff') format('woff'),url('../webfonts/27566B_0_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'GrotesqueMT';src: url('../webfonts/27566B_1_0.eot');src: url('../webfonts/27566B_1_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/27566B_1_0.woff') format('woff'),url('../webfonts/27566B_1_0.ttf') format('truetype');}
+ 

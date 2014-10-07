@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>	
+	<meta charset="utf-8" />
+	<title>The People's E-Book</title>
+  	<meta name="Description" content="A tool to make e-books better" />
+  	<link rel="stylesheet" href="../css/font-awesome.min.css" />
+  	<link rel="stylesheet" type="text/css" href="../css/MyFontsWebfontsKit.css" />
+  	<link rel="stylesheet" type="text/css" href="../css/pe-website.css" />
+  	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<link rel="stylesheet" href="../css/pe-columnreader.css" />
+</head>
+<body onload="setLayout();" onresize="checkWidth();" >
+	<div id="header" class="drawer">
+		<div id="textarea">
+			<div id="about" class="section">
+				<h4>About</h4>
+				<p>A free tool to make e-books better</p>
+				<p>Created by <a href="http://www.holartbooks.com" title="Hol Art Books">Hol Art Books</a> and <a href="http://www.thepresentgroup.com" title="The Present Group">The Present Group</a>. Funded by <a href="http://www.kickstarter.com/projects/1371597318/the-peoples-e-book" title="The People's E-Book on Kickstarter">920 Kickstarter backers</a>.</p>
+			</div>
+		</div>
+		<div id="tab"><h4>The People's E-Book &#160;<i class="icon-chevron-down" id="tabpointer"></i></h4></div>
+	</div>
+	<div id="main">
+		<div id="controls">
+			<i class="icon-list icon-large" id="tocicon"></i>
+			<i class="icon-download-alt icon-large" id="downloadicon"></i>
+			<i class="icon-home icon-large"></i>
+		</div>	
+		<div id="reader">
+			<div id="prev" class="nav"><i class="icon-angle-left icon-large" onclick="scrollPrev();"></i>&#160;<i class="icon-double-angle-left icon-large" onclick="scrollBeginning();"></i></div>
+			<div id="textframe">
+		<div id="text">
+			<h1>Book Title &#38; Information</h1>
+			<p>Delectus lo-fi occaecat direct trade, ullamco tempor freegan iPhone farm-to-table ex selfies art party tote bag. Accusamus keytar cornhole wayfarers, delectus semiotics cliche fugiat sint id exercitation. Keffiyeh gluten-free Tumblr, lo-fi twee banh mi forage sriracha anim. Tofu exercitation nulla selfies commodo wayfarers keytar, Thundercats Tumblr laborum sunt cillum. Forage squid flexitarian dolor Banksy, accusamus food truck deep v High Life. Bicycle rights laboris Wes Anderson four loko. Bespoke aliquip put a bird on it direct trade, cred ugh nesciunt chambray.</p>
+			<p>Locavore Godard nostrud gastropub est, non trust fund cornhole craft beer sunt proident cillum Shoreditch Vice swag. Dolore Banksy ugh 3 wolf moon, minim Pitchfork meh pork belly eiusmod Helvetica fixie. Pinterest mustache artisan est cred kale chips. Schlitz Portland twee, dolore duis YOLO aesthetic Godard master cleanse plaid nostrud mixtape. Paleo wolf ad, wayfarers exercitation authentic dreamcatcher consectetur sartorial PBR. Pop-up distillery keytar, swag magna DIY dolor banh mi qui paleo forage Shoreditch bicycle rights hashtag. Est fashion axe tempor pug Helvetica lo-fi.</p>
+			<p>Organic slow-carb labore Truffaut, gentrify ex banh mi Carles mollit aliquip selvage. Officia next level fixie, Wes Anderson Truffaut placeat dolore brunch labore squid duis chambray aliqua hashtag bicycle rights. Eiusmod viral flannel iPhone YOLO. Aesthetic flannel leggings gastropub. Bespoke pour-over mustache, trust fund organic Blue Bottle iPhone leggings. Truffaut consequat Echo Park sint meggings, officia velit drinking vinegar art party aesthetic enim elit. Biodiesel proident mumblecore Terry Richardson.</p>
+			<p>Artisan incididunt YOLO nostrud, lo-fi Tonx jean shorts selvage paleo pickled Odd Future you probably haven't heard of them letterpress swag. Ennui dreamcatcher Schlitz keffiyeh, Wes Anderson squid dolor paleo selfies occupy +1 Thundercats. Craft beer fugiat aute, sint forage lo-fi ullamco. Cupidatat tote bag lo-fi seitan tattooed ut, wayfarers in sartorial food truck put a bird on it flexitarian whatever. Austin sunt ea sint bespoke sed gluten-free. Plaid exercitation ullamco, occupy nihil quinoa bicycle rights twee enim ad Williamsburg locavore consequat. Hella shabby chic squid, hoodie pickled whatever biodiesel American Apparel Echo Park roof party PBR&#38;B ethical retro.</p>
+			<p>Banh mi pug proident, voluptate single-origin coffee literally flannel American Apparel cornhole. Meggings food truck fingerstache cupidatat Vice Intelligentsia. Actually food truck chia, laborum PBR&#38;B Blue Bottle YOLO nihil kogi. Id selvage jean shorts viral next level. Cornhole qui drinking vinegar, dolor kitsch small batch meggings mumblecore retro nostrud wolf 3 wolf moon duis lomo Portland. Eu vero ex sed. Bicycle rights raw denim non, before they sold out meh delectus eu.</p>
+			<p>Truffaut dolore 90's, roof party irony non VHS actually Thundercats sustainable selfies mixtape gastropub. Pinterest Tonx occaecat, brunch officia aute Odd Future duis Carles seitan gentrify Etsy cred commodo forage. High Life Etsy cardigan, swag sapiente Tumblr Portland food truck brunch street art church-key consectetur ex +1. Banksy Tumblr tousled, velit gentrify chia gastropub. Yr Wes Anderson odio, cray gentrify McSweeney's assumenda church-key consequat. Lo-fi bitters trust fund pour-over locavore, stumptown chia Banksy. Tonx jean shorts umami selvage mollit, drinking vinegar nisi church-key sartorial aliqua before they sold out art party.</p>
+			<p>Eiusmod et Williamsburg. Tattooed church-key bitters, trust fund meggings Vice distillery readymade authentic occaecat. Paleo Echo Park nesciunt banh mi flannel. Proident Vice literally sustainable scenester. PBR aute tofu, cray placeat cupidatat butcher viral commodo delectus anim. Blue Bottle aliquip consequat et Shoreditch slow-carb mixtape, lo-fi consectetur. Church-key kitsch mollit, readymade chillwave viral aliquip gentrify small batch actually in authentic.</p>
+			<p>Eiusmod church-key Schlitz mustache sed, kogi cliche ullamco you probably haven't heard of them irony small batch veniam Austin plaid. Do keffiyeh stumptown slow-carb commodo. Banksy raw denim sunt, lo-fi sustainable dreamcatcher ethical. Pariatur 3 wolf moon seitan cliche. 3 wolf moon farm-to-table swag aesthetic small batch. VHS YOLO in anim Echo Park fanny pack, plaid craft beer Odd Future leggings. Vice ut polaroid in, drinking vinegar raw denim tousled wolf you probably haven't heard of them Shoreditch leggings.</p>
+			<p>Sint elit typewriter est dolor, PBR pug ullamco sunt tempor kitsch labore raw denim Shoreditch iPhone. Placeat yr ea, tousled anim nisi direct trade Shoreditch mustache ullamco Pinterest keffiyeh. American Apparel et kitsch, Neutra laboris fingerstache adipisicing vinyl retro magna placeat kale chips. PBR ut Austin brunch, esse fashion axe placeat polaroid. Ex mixtape letterpress, raw denim Godard fixie veniam delectus 3 wolf moon. Vice elit velit, Williamsburg duis literally pickled Blue Bottle roof party Pitchfork pariatur street art High Life. Vegan typewriter bespoke flexitarian, gentrify Williamsburg wayfarers street art.</p>
+			<p>Minim Blue Bottle magna, do laboris put a bird on it street art PBR&#38;B fashion axe banh mi. Polaroid culpa ugh, try-hard brunch tote bag chia master cleanse nesciunt occaecat fixie cillum. Deserunt small batch adipisicing, fugiat quinoa synth twee Pinterest voluptate pug flannel retro craft beer. Pitchfork aliqua swag salvia brunch, whatever viral food truck dolore ex incididunt skateboard. Polaroid YOLO officia, quis skateboard dolore bitters nisi artisan. Lo-fi drinking vinegar nostrud aute stumptown Brooklyn cornhole, umami banjo paleo you probably haven't heard of them distillery trust fund id. Yr actually tattooed velit Neutra.</p>
+		</div>
+		</div>
+			<div id="next" class="nav"><i class="icon-double-angle-right icon-large" onclick="scrollEnd();"></i>&#160;<i class="icon-angle-right icon-large" onclick="scrollNext();"></i></div>
+		</div>
+	</div>
+	<div id="sidebar">
+		<div id="sidebarcontrols">
+			<i class="icon-remove-sign icon-large" id="tocclose"></i>
+			<h4>Table of Contents</h4>
+		</div>
+		<ul id="toc">
+			<li><a href="quickstart.html">Quick Start</a></li>
+			<li>
+				<i class="icon-plus"></i>Tool Basics
+				<ul>
+					<li><a href="basics.html#toolbar">Toolbar</a></li>
+					<li><a href="basics.html#pages">Pages</a></li>
+					<li><a href="basics.html#titles">Book &#38; Chapter Titles</a></li>
+					<li><a href="basics.html#checkboxes">Checkboxes</a></li>
+				</ul>
+			</li>
+			<li>Book Title &#38; Info</li>
+			<li>Cover</li>
+			<li>Table of Contents</li>
+			<li>
+				<i class="icon-plus"></i>Text Formatting Basics
+				<ul>
+					<li>Importing</li>
+					<li>Remove Formatting</li>
+					<li>Bold/Italic	</li>
+					<li>Lists</li>
+					<li>Indent	</li>
+					<li>Text Alignment</li>
+					<li>Special Characters</li>
+					<li>Paragraphs &#38; Headings</li>
+				</ul>
+			</li>
+			<li>
+				<i class="icon-plus"></i>Text Styling
+				<ul>
+					<li>Paragraph styles</li>
+					<li>Image &#38; caption styles</li>
+					<li>Text styles</li>
+					<li>Text color</li>
+				</ul>
+			</li>
+			<li>Links</li>
+			<li>
+				<i class="icon-plus"></i>Images
+				<ul>
+					<li>Formats</li>
+					<li>Image &#38; caption styles</li>
+					<li>Cover images</li>
+				</ul>
+			</li>
+			<li>
+				<i class="icon-plus"></i>Video
+				<ul>
+					<li>Formats</li>
+					<li>Fallbacks</li>
+					<li>Poster Image</li>
+				</ul>
+			</li>
+			<li>
+				<i class="icon-plus"></i>Audio
+				<ul>
+					<li>Formats</li>
+					<li>Fallbacks</li>
+				</ul>
+			</li>
+			<li>
+				<i class="icon-plus"></i>Outputting Your Book
+				<ul>
+					<li>Versions</li>
+					<li>About .epub</li>
+				</ul>
+			</li>
+			<li>Reading</li>
+			<li>Distributing</li>
+			<li>Converting to Other Formats</li>
+			<li>Advanced Customization</li>
+			<li>Awesome User Projects</li>
+			<li>Resources</li>
+		</ul>	
+	</div>
+	<script type="text/javascript">
+		var pr = 'basics.html';  /* previous document in book */
+		var nx = '';  /* next document in book */
+	</script>
+	<script src="../js/pe-columnreader.js" type="text/javascript"></script>
+	<script type="text/javascript">	
+		$(document).ready(function() {
+			$("#tab").click(function () {
+			$("#header").toggleClass("opentop");
+			$("#tabpointer").toggleClass("icon-chevron-up");
+			});			
+			$("#tocicon").click(function () {
+			$("#sidebar").toggleClass("show");
+			});			
+			$("#tocclose").click(function () {
+			$("#sidebar").toggleClass("show");
+			});			
+			$("#toc > li").click(function() {
+			$(this).children("ul").slideToggle();
+			});		
+		});	
+	</script>	
+</body>
+</html>
+
