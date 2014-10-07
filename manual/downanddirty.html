@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>	
+	<meta charset="utf-8" />
+	<title>The People&#8217;s E-Book ++ User Manual</title>
+  	<meta name="Description" content="A tool to make e-books better" />
+  	<meta name="viewport" content="width=device-width">
+    <meta name="apple-mobile-web-app-capable" content="yes">	
+  	<link rel="stylesheet" type="text/css" href="../css/MyFontsWebfontsKit.css" />
+  	<link rel="stylesheet" href="../css/font-awesome.min.css" />
+  	<link rel="stylesheet" type="text/css" href="../css/pe-website.css" />  	
+	<link rel="stylesheet" href="../css/pe-columnreader.css" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>  
+</head>
+<body>
+	<div id="header" class="drawer">
+		<div id="textarea">
+			<div id="about" class="section">
+				<h4>About</h4>
+				<p>A free tool to make e-books better</p>
+				<p>Created by <a href="http://www.holartbooks.com" title="Hol Art Books">Hol Art Books</a> and <a href="http://www.thepresentgroup.com" title="The Present Group">The Present Group</a>.<br />Funded by <a href="peoplefunded.html" title="The People's E-Book is People Funded">920 Kickstarter backers</a>.</p>
+			</div>
+		</div>
+		<div id="tab"><h4>The People's E-Book &#160;<i class="icon-chevron-down" id="tabpointer"></i></h4></div>
+	</div>
+	<div id="main">
+		<div id="controls">
+			<i class="icon-list icon-large" id="tocicon"></i>
+			<i class="icon-download-alt icon-large" id="downloadicon"></i>
+			<i class="icon-home icon-large"></i>
+		</div>	
+		<div id="reader">
+			<div id="prev" class="nav">
+				<i class="icon-angle-left icon-large" id="scrollprev"></i>&#160;<i class="icon-double-angle-left icon-large" id="scrollbeginning"></i>
+			</div>
+			<div id="textframe">
+		<div id="text">
+			<div class="intro">
+			<h1>The Down &#38; Dirty User Manual</h1>
+			<p>The People&#8217;s E-Book is tool now in beta, and so is this User Manual. While we will eventually have full documentation and instruction for using the tool, for now we have simply highlighted some of the top features and the most common questions.</p>
+			</div>
+			<h3 id="">The Minimum E-Book</h3>
+			<p>The People&#8217;s E-Book is designed to allow you to make an e-book as fast as possible, with the bare minimum of content. To this end, there are only three things you need to enter before you can click the &#8220;Create Your E-Book&#8221; button:</p>
+			<ol>
+				<li>Title</li>
+				<li>Cover image</li>
+				<li>A single bit of content</li>
+			</ol>
+			<p>To add a title (and also to change the title of your page blocks) move your cursor over the type on the screen, click and start typing.</p>
+			<p>To upload a cover image, drag it from your desktop onto the cover thumbnail, or do the same into your Assets tab, and then drag from there onto the cover thumbnail. <a href="#imageformat">Read about cover image sizes here</a>, and <a href="#hiding">read about displaying your cover inside your e-book here</a>.</p>
+			<p>To add content to your book, double-click the page thumbnail and start typing. Or, drag an image from your Asset tab onto the thumbnail to create an image page automatically.</p>
+			<h3 id="">People&#8217;s E-Book Toolbar</h3>
+			<p>NEW PAGE BLOCK: Rather than chapters or pages, we refer to each new content document in your e-book as a page block. Page blocks can have a lot or a little content, ande-readers will break them into pages automatically. So, in your finished e-book, a single page block might be one page, or it might be hundreds of pages. Click the icon to add a new page block to the end of your book, or click and drag it into position within your pages.</p>
+			<p>ASSETS: The Assets button open a drawer with all of the images, videos and audio clips you have uploaded to the People's E-Book. </p>
+			<h3 id="toolbar">Images, Audio &#38; Video</h3>
+			<p>To upload images, audio and video files, simply drag them from your desktop to the Assets icon. The Assets drawer will open and you can release the files to automatically upload. Or, use the "Browse" button inside the Assets drawer to search your computer.</p>
+			<p>All your uploaded images, audio and video files will then appear in your Assets drawer and can be used in any of your e-book projects simply by dragging and dropping. Use tags to organize your Assets by category or subject.</p>
+			<h4>IMAGES:</h4>
+			<p>The tool accepts JPG, GIF and PNG. They can be color, black and white, have transparency, or be animated. Please note though that animation will not work on all e-reading devices.</p>
+			<p>Images need not be higher than screen resolution (72 ppi). </p>
+			<p>COVER IMAGES should be a minimum of 1400px wide. They can be any height, but we recommend (and the People's E-Book preview is sized to) proportions of 3:4. </p>
+			<p>INTERIOR IMAGES needn't be more than 600-800px wide unless you expect your book to be read on larger screens, or want users to be able to zoom in on the image (which is possible in some, but not all, e-readers).</p>
+			<p>For your convenience, uploaded images over 1400px wide are automatically resized and optimized for e-book reading. </p>
+			<h4>AUDIO and VIDEO:</h4>
+			<p>Audio and video support in The People's E-Book is functional, but still very much in a beta phase. Please proceed accordingly.</p>
+			<p>The tool accepts MP3 for audio, and MP4 and WEBM for video. </p>
+			<p>In the future, the People's E-Book will offer automated video formatting and multi-format fallbacks. But for now, we recommend using MP4 with H.264 and AAC codecs as your primary video file.</p>
+		</div>
+		</div>
+			<div id="next" class="nav">
+				<i class="icon-double-angle-right icon-large" id="scrollend"></i>&#160;<i class="icon-angle-right icon-large" id="scrollnext"></i>
+			</div>
+		</div>
+	</div>
+	<div id="sidebar">
+		<div id="sidebarcontrols">
+			<i class="icon-remove-sign icon-large" id="tocclose"></i>
+			<h4>Table of Contents</h4>
+		</div>
+		<ul id="toc">
+			<li><a href="quickstart.html">Quick Start</a></li>
+			<li>
+				<i class="icon-plus"></i>Tool Basics
+				<ul>
+					<li><a href="basics.html#toolbar">Toolbar</a></li>
+					<li><a href="basics.html#pages">Pages</a></li>
+					<li><a href="basics.html#titles">Book &#38; Chapter Titles</a></li>
+					<li><a href="basics.html#checkboxes">Checkboxes</a></li>
+				</ul>
+			</li>
+			<li><a href="bookinfo.html">Book Title &#38; Info</a></li>
+			<li>Cover</li>
+			<li>Table of Contents</li>
+			<li>
+				<i class="icon-plus"></i>Text Formatting Basics
+				<ul>
+					<li>Importing</li>
+					<li>Remove Formatting</li>
+					<li>Bold/Italic	</li>
+					<li>Lists</li>
+					<li>Indent	</li>
+					<li>Text Alignment</li>
+					<li>Special Characters</li>
+					<li>Paragraphs &#38; Headings</li>
+				</ul>
+			</li>
+			<li>
+				<i class="icon-plus"></i>Text Styling
+				<ul>
+					<li>Paragraph styles</li>
+					<li>Image &#38; caption styles</li>
+					<li>Text styles</li>
+					<li>Text color</li>
+				</ul>
+			</li>
+			<li>Links</li>
+			<li>
+				<i class="icon-plus"></i>Images
+				<ul>
+					<li>Formats</li>
+					<li>Image &#38; caption styles</li>
+					<li>Cover images</li>
+				</ul>
+			</li>
+			<li>
+				<i class="icon-plus"></i>Video
+				<ul>
+					<li>Formats</li>
+					<li>Fallbacks</li>
+					<li>Poster Image</li>
+				</ul>
+			</li>
+			<li>
+				<i class="icon-plus"></i>Audio
+				<ul>
+					<li>Formats</li>
+					<li>Fallbacks</li>
+				</ul>
+			</li>
+			<li>
+				<i class="icon-plus"></i>Outputting Your Book
+				<ul>
+					<li>Versions</li>
+					<li>About .epub</li>
+				</ul>
+			</li>
+			<li>Reading</li>
+			<li>Distributing</li>
+			<li>Converting to Other Formats</li>
+			<li>Advanced Customization</li>
+			<li>Awesome User Projects</li>
+			<li>Resources</li>
+		</ul>	
+	</div>
+	<script type="text/javascript">
+		var pr = 'quickstart.html';  /* previous document in book */
+		var nx = 'bookinfo.html';  /* next document in book */		
+	</script>
+	<script src="../js/pe-columnreader.js" type="text/javascript"></script>
+	<script type="text/javascript">	
+		$(window).load(setLayout);
+		$(document).ready(function() {			
+			$(window).resize(checkWidth);			
+			$("#scrollprev").click(scrollPrev);
+			$("#scrollbeginning").click(scrollBeginning);
+			$("#scrollnext").click(scrollNext);
+			$("#scrollend").click(scrollEnd);			
+			$("#tab").click(function () {
+			$("#header").toggleClass("opentop");
+			$("#tabpointer").toggleClass("icon-chevron-up");
+			});			
+			$("#tocicon").click(function () {
+			$("#sidebar").toggleClass("show");
+			});			
+			$("#tocclose").click(function () {
+			$("#sidebar").toggleClass("show");
+			});			
+			$("#toc > li").click(function() {
+			$(this).children("ul").slideToggle();
+			});		
+		});	
+	</script>	
+</body>
+</html>
+
