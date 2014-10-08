@@ -8,13 +8,13 @@ var gap = 20;  /* gap between columns */
 
 var cols = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 
-//Sets and checks document layout and scrolling
+// Sets and checks document layout and scrolling
 
-var t = document.getElementById('text');
-var f = document.getElementById('textframe');
+var cr = document.getElementById('columnreader');	
 var p = document.getElementById('prev');
 var n = document.getElementById('next');
-var r = document.getElementById('reader');	
+var f = document.getElementById('pageframe');
+var t = document.getElementById('text');
 var x = col + gap;		
 var controls = p.offsetWidth + n.offsetWidth;
 function setLayout() {
@@ -39,7 +39,7 @@ function checkWidth() {
 	for ( i = 0; i < cols.length; i++) {		
 		if ( cols[i] <= colnum) { 
 		f.style.width= (cols[i] * x) - gap + "px"; 
-		r.style.width= (cols[i] * x) - gap + controls + "px"; }
+		cr.style.width= (cols[i] * x) - gap + controls + "px"; }
 		}
 	};	
 function scrollNext() {

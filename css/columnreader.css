@@ -1,18 +1,18 @@
-/* If necessary sets postion of Column Reader on the page. Column Reader is a single division made up of a Previous Navigation element, a Text Frame element, and a Next Navigation element */
+/* If necessary sets postion of Column Reader on the page. Column Reader is a single division made up of a Previous Navigation element, a Page Frame element that contains the text, and a Next Navigation element */
 
-div#reader {
+div#columnreader {
 	margin: 40px auto 0px; }	
 
 
-/* Sets Text Frame */
+/* Sets the Page Frame */
 
-div#textframe { 
+div#pageframe { 
 	margin: 0;
 	overflow: auto; 
 	float:left; }
 
 
-/* Sets width and stylying of Next and Previous navigation elements on either side of the Text Frame */ 
+/* Sets width and stylying of Next and Previous navigation elements on either side of the Page Frame */ 
 
 div.nav { 
 	float:left;
