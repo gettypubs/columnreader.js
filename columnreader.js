@@ -20,7 +20,7 @@ var controls = p.offsetWidth + n.offsetWidth;
 function setLayout() {
 	p.style.marginTop = ht * .4  + "px";
 	n.style.marginTop = ht * .4  + "px";	
-	f.style.height = ht + 20 + "px";
+	f.style.height = ht + 40 + "px";
 	f.style.width = col + "px";
 	t.style.height = ht + "px";
 	t.style.columnWidth = col + "px";

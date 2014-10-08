@@ -238,12 +238,18 @@ figure {
 img {
   vertical-align: middle;
 }
+
+
+/* Adjusted max-width from 100 to 90%, added top and bottom margins  */
+
 .img-responsive {
   display: block;
-  width: 100% \9;
-  max-width: 100%;
+  max-width: 90%;
   height: auto;
+  margin: 10px 0;
 }
+
+
 .img-rounded {
   border-radius: 6px;
 }

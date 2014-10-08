@@ -1,7 +1,7 @@
 /* If necessary sets postion of Column Reader on the page. Column Reader is a single division made up of a Previous Navigation element, a Page Frame element that contains the text, and a Next Navigation element */
 
 div#columnreader {
-	margin: 40px auto 0px; }	
+	margin: 55px auto 0px; }	
 
 
 /* Sets the Page Frame */
@@ -36,10 +36,7 @@ span.dblarrow {
 span.dblarrow:hover {
 	color: #999; }		
 	
-	
 
-	
-	
 	
 	
 	
