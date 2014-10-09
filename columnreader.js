@@ -11,24 +11,24 @@ var cols = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 // Sets and checks document layout and scrolling
 
 var cr = document.getElementById('columnreader');	
-var p = document.getElementById('prev');
-var n = document.getElementById('next');
-var f = document.getElementById('pageframe');
-var t = document.getElementById('text');
+var bck = document.getElementById('back');
+var ahd = document.getElementById('ahead');
+var frm = document.getElementById('pageframe');
+var txt = document.getElementById('text');
 var x = col + gap;		
-var controls = p.offsetWidth + n.offsetWidth;
+var controls = bck.offsetWidth + ahd.offsetWidth;
 function setLayout() {
-	p.style.marginTop = ht * .4  + "px";
-	n.style.marginTop = ht * .4  + "px";	
-	f.style.height = ht + 40 + "px";
-	f.style.width = col + "px";
-	t.style.height = ht + "px";
-	t.style.columnWidth = col + "px";
-	t.style.MozColumnWidth = col + "px";
-	t.style.WebkitColumnWidth = col + "px";
-	t.style.columnGap = gap + "px";
-	t.style.MozColumnGap = gap + "px";
-	t.style.WebkitColumnGap = gap + "px";
+	bck.style.marginTop = ht * .4  + "px";
+	ahd.style.marginTop = ht * .4  + "px";	
+	frm.style.height = ht + 40 + "px";
+	frm.style.width = col + "px";
+	txt.style.height = ht + "px";
+	txt.style.columnWidth = col + "px";
+	txt.style.MozColumnWidth = col + "px";
+	txt.style.WebkitColumnWidth = col + "px";
+	txt.style.columnGap = gap + "px";
+	txt.style.MozColumnGap = gap + "px";
+	txt.style.WebkitColumnGap = gap + "px";
 	checkWidth();		
 	};				
 function checkWidth() { 	
@@ -38,45 +38,45 @@ function checkWidth() {
 	var colnum = Math.floor(b);
 	for ( i = 0; i < cols.length; i++) {		
 		if ( cols[i] <= colnum) { 
-		f.style.width= (cols[i] * x) - gap + "px"; 
+		frm.style.width= (cols[i] * x) - gap + "px"; 
 		cr.style.width= (cols[i] * x) - gap + controls + "px"; }
 		}
 	};	
-function scrollNext() {
-	var xtr = f.scrollLeft % x;
+function stepAhead() {
+	var xtr = frm.scrollLeft % x;
 	for ( i = 0; i < cols.length; i++) {
-		if ( f.style.width==((cols[i] * x) - gap) + "px" ) {
-		f.scrollLeft = f.scrollLeft + ((cols[i] * x)-xtr);}
+		if ( frm.style.width==((cols[i] * x) - gap) + "px" ) {
+		frm.scrollLeft = frm.scrollLeft + ((cols[i] * x)-xtr);}
 		}
 	};	
-function scrollEnd() {
+function jumpAhead() {
 	for ( i = 0; i < cols.length; i++) {
-		if ( f.style.width==((cols[i] * x) - gap) + "px" ) {
-		if ( f.scrollLeft >= (f.scrollWidth - ((cols[i] * x) - gap)) ) { window.location.href = nx; }
-		else { f.scrollLeft = f.scrollWidth - ((cols[i] * x) - gap); } }
+		if ( frm.style.width==((cols[i] * x) - gap) + "px" ) {
+		if ( frm.scrollLeft >= (frm.scrollWidth - ((cols[i] * x) - gap)) ) { window.location.href = nx; }
+		else { frm.scrollLeft = frm.scrollWidth - ((cols[i] * x) - gap); } }
 		}
 	};				
-function scrollPrev() {
-	var xtr = f.scrollLeft % x;			
+function stepBack() {
+	var xtr = frm.scrollLeft % x;			
 	if ( xtr == 0 ) { var y = 0; }
 	else { var y = x - xtr; };
 	for ( i = 0; i < cols.length; i++) {
-		if ( f.style.width==((cols[i] * x) - gap) + "px" ) {
-		f.scrollLeft = f.scrollLeft - ((cols[i] * x)-y);}
+		if ( frm.style.width==((cols[i] * x) - gap) + "px" ) {
+		frm.scrollLeft = frm.scrollLeft - ((cols[i] * x)-y);}
 		}
 	};							
-function scrollBeginning() {
-	if ( f.scrollLeft == 0 ) { window.location.href = pr; }
-	{ f.scrollLeft = 0; }
+function jumpBack() {
+	if ( frm.scrollLeft == 0 ) { window.location.href = pr; }
+	{ frm.scrollLeft = 0; }
 	};
 	
 
 $(window).load(setLayout);
 $(document).ready(function() {			
 	$(window).resize(checkWidth);			
-	$("#scrollprev").click(scrollPrev);
-	$("#scrollbeginning").click(scrollBeginning);
-	$("#scrollnext").click(scrollNext);
-	$("#scrollend").click(scrollEnd);							
+	$("#stepback").click(stepBack);
+	$("#jumpback").click(jumpBack);
+	$("#stepahead").click(stepAhead);
+	$("#jumpahead").click(jumpAhead);							
 });		
 	
