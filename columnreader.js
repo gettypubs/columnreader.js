@@ -63,12 +63,17 @@ function stepBack() {
 //
 // JUMP OPTION A: 
 // Jumps immediately to the start of the next or previous chapter	
+// if there is no next or previous chapter defined, jumps to end or beginning of current chapter
 //
 function jumpAhead() {
-	window.location.href = nx; 
+	for ( i = 0; i < cols.length; i++) {
+		if (typeof nx === 'undefined') { frm.scrollLeft = frm.scrollWidth - ((cols[i] * x) - gap); }
+		{ window.location.href = nx; }
+		}
 	};
 function jumpBack() {
-	window.location.href = pr; 
+	if (typeof pr === 'undefined') { frm.scrollLeft = 0; }
+	{ window.location.href = pr; }
 	};
 //
 // JUMP OPTION B: 
