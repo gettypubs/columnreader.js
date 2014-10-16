@@ -48,13 +48,6 @@ function stepAhead() {
 		if ( frm.style.width==((cols[i] * x) - gap) + "px" ) {
 		frm.scrollLeft = frm.scrollLeft + ((cols[i] * x)-xtr);}
 		}
-	};	
-function jumpAhead() {
-	for ( i = 0; i < cols.length; i++) {
-		if ( frm.style.width==((cols[i] * x) - gap) + "px" ) {
-		if ( frm.scrollLeft >= (frm.scrollWidth - ((cols[i] * x) - gap)) ) { window.location.href = nx; }
-		else { frm.scrollLeft = frm.scrollWidth - ((cols[i] * x) - gap); } }
-		}
 	};				
 function stepBack() {
 	var xtr = frm.scrollLeft % x;			
@@ -64,11 +57,35 @@ function stepBack() {
 		if ( frm.style.width==((cols[i] * x) - gap) + "px" ) {
 		frm.scrollLeft = frm.scrollLeft - ((cols[i] * x)-y);}
 		}
-	};							
-function jumpBack() {
-	if ( frm.scrollLeft == 0 ) { window.location.href = pr; }
-	{ frm.scrollLeft = 0; }
+	};	
+
+// Select either JUMP OPTION A or B
+//
+// JUMP OPTION A: 
+// Jumps immediately to the start of the next or previous chapter	
+//
+function jumpAhead() {
+	window.location.href = nx; 
 	};
+function jumpBack() {
+	window.location.href = pr; 
+	};
+//
+// JUMP OPTION B: 
+// First jumps to end or beginning of current chapter
+// and then to the start of the next or previous chapter
+//
+// function jumpAhead() {
+// 	for ( i = 0; i < cols.length; i++) {
+// 		if ( frm.style.width==((cols[i] * x) - gap) + "px" ) {
+// 		if ( frm.scrollLeft >= (frm.scrollWidth - ((cols[i] * x) - gap)) ) { window.location.href = nx; }
+// 		else { frm.scrollLeft = frm.scrollWidth - ((cols[i] * x) - gap); } }
+// 		}
+// 	};								
+// function jumpBack() {
+// 	if ( frm.scrollLeft == 0 ) { window.location.href = pr; }
+// 	{ frm.scrollLeft = 0; }
+// 	};
 	
 
 $(window).load(setLayout);
