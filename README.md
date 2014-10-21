@@ -2,9 +2,9 @@
 
 #columnreader.js
 
-This is JavaScript and simple CSS to display text in multiple columns, with horizonatal scrolling, that responds to the browser window or mobile device by displaying more or fewer columns as they fit. Quickly adjust the column width, height and gap between columns for your particular publication, and the scrolling function adjusts automatcially.
+This is JavaScript and simple CSS to display text in multiple columns, with horizonatal scrolling, that responds to the browser window or mobile device by displaying more or fewer columns as they fit. Quickly adjust the column width, height and gap between columns for your particular publication, and the scrolling function adjusts automatically.
 
-Column Reader can be placed anywhere on an existing page, or on a page of its own. It is a division made up of three main elements, lined up left to right: the Previous Navigation, the Page Frame, and the Next Navigation. 
+Column Reader can be placed anywhere on an existing page, or on a page of its own. It is a division made up of three main elements, lined up left to right: the Back Navigation, the Page Frame, and the Ahead Navigation. 
 
 To start, link to columnreader.css in the head of your HTML document:
 
@@ -13,7 +13,7 @@ To start, link to columnreader.css in the head of your HTML document:
 	<link rel="stylesheet" href="css/columnreader.css" />
 </head>
 ```
-Add two script elements at the bottom of your HTML document, just before the closing body tag:
+Add two script elements at the bottom of your HTML document, just before the closing body tag. These establish the reading order of chapters split into multiple html files, and call the Column Reader scripts for rendering those files into columnd.
 
 ```html
 <script type="text/javascript">
@@ -45,7 +45,7 @@ Copy and paste the Column Reader where you want it in your HTML document. Replac
 
 ###Adjusting the columns
 
-By default, columns are set up with a width of 380px and a height of 560px, but they're easy to adjust in the columnreader.js file:
+By default, columns are set up with a width of 380px, a height of 560px and a gap between columns of 20px, but all these are easy to adjust in the columnreader.js file:
 
 ```js
 // Change these to adjust your layout
@@ -63,4 +63,8 @@ Also in the columnreader.js file, you can also specify a maximum number of colum
 var cols = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 ```
 
+Whereas this example would never display more than 3 columns:
 
+```js
+var cols = [1, 2, 3];
+```
